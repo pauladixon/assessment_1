@@ -18,17 +18,17 @@ function init(){
 function render(){
     if (currentNumber < 0){
         counter.style.color = "red";
-    }
+    } else counter.style.color = "black";
     counter.innerHTML = currentNumber;
 }
 
 function addNumber() {
-    currentNumber = currentNumber + inputNumber.value;
+    currentNumber = currentNumber + Math.floor(inputNumber.value);
     render();
 }
 
 function subtractNumber() {
-    currentNumber = currentNumber - inputNumber.value;
+    currentNumber = currentNumber - Math.floor(inputNumber.value);
     render();
 }
 
